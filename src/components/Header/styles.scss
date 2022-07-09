@@ -1,14 +1,15 @@
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 60px;
-
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 80px;
+    width: 10;
+    margin: 0 120px;
 
     
     .logo{
-        width:121px; 
+        width: 121px; 
         height: 33px;
         cursor: pointer;
     }
