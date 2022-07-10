@@ -8,6 +8,7 @@
 
     /*Neutral*/
     --gray: hsl(0, 0%, 75%);
+    --gray_100: hsl(225, 33.3%, 95.3%);
     --grayish_violet: hsl(257, 7%, 63%);
     --very_dark_blue: hsl(255, 11%, 22%);
     --very_dark_violet: hsl(260, 8%, 14%);
@@ -18,6 +19,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 body{
     font-size: 18px;

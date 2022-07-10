@@ -1,11 +1,11 @@
 .hero{
-    height: 90vh;
-    width: auto;
+    width: 110vw;
 
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
+    padding-bottom: 150px;
 
     .content{
         display: flex;
@@ -13,6 +13,7 @@
         justify-content: center;
         flex-direction: column;
         max-width: 720px;
+        
         
         padding: 0 100px 0 100px;
 
@@ -37,7 +38,7 @@
         height: 50px;
         width: 180px;
         align-self: flex-start;
-       margin-top: 30px;
+        margin-top: 30px;
         color: white;
         background: var(--cyan);
         border-radius: 30px;
