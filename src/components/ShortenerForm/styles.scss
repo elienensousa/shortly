@@ -1,0 +1,58 @@
+.shorter_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, white 0, white 80px, var(--gray_100) 80px);
+
+    .shorter_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: url('../../assets/bg-shorten-desktop.svg') var(--dark_violet);
+        width: 1110px;
+        height: 168px;
+
+        .shorter_input{
+            width: 70%;
+            height: 60px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            text-indent: 2rem;
+        }
+        input::placeholder{
+            font-size: 20px;
+            text-indent: 2rem;
+            color: var (--grayish_violet);
+        }
+
+        .shorter_button{
+        height: 60px;
+        width: 190px;
+        color: white;
+        background: var(--cyan);
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 20px;
+                
+            &:hover{
+                background: hsl(180, 66%, 75%);
+            }
+        }
+    }
+
+    .shortened{
+        margin: auto;
+        margin-top: 20px;
+        background: white;
+        border: red 1px solid;
+        border-radius: 5px;
+        width: 1110px;
+        height: 70px;
+    }
+
+}
