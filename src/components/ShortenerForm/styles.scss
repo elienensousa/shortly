@@ -29,6 +29,9 @@
         }
 
         .shorter_button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 60px;
         width: 190px;
         color: white;
@@ -43,6 +46,8 @@
                 background: hsl(180, 66%, 75%);
             }
         }
+
+        
     }
 
     .shortened{

@@ -1,0 +1,36 @@
+.loading_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 190px;
+    color: white;
+    background: var(--cyan);
+    border-radius: 10px;
+    border: none;
+    cursor: not-allowed;
+            
+        &:hover{
+            background: hsl(180, 66%, 75%);
+        }
+
+        .spinner{
+            animation: loader 1s infinite;
+            border: 6px solid #e5e5e5;
+            border-radius: 50%;
+            border-top-color: var(--grayish_violet);
+            height: 40px;
+            width: 40px;
+    
+    
+            @keyframes loader {
+                to {
+                  transform: rotate(360deg);
+                }
+              }
+    
+        }
+        
+}
+
+
