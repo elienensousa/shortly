@@ -1,7 +1,7 @@
 import './styles.scss'
 
 
-export function LoaLoadingButton (){
+export function LoadingButton (){
     return(
         <>
             <button className='loading_button'>
