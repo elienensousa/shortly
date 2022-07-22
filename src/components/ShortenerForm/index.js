@@ -3,6 +3,7 @@ import axios from 'axios'
 import './styles.scss'
 import { LoadingButton } from './LoadingButton'
 import validatorUrl from '../../util/validator'
+import { ShortenedList } from '../ShortenedList'
 
 export function ShortenerForm (){
     const [loading, setLoading] = useState(false)
@@ -54,12 +55,9 @@ export function ShortenerForm (){
                     >Shorten It!</button>}
 
                 </div>
-                
-                
-                <div className='shortened'>
-                    <span>{input}</span>
-                    <span>{shortened}</span>
-                </div>
+                <ShortenedList input={input}
+                shortened={shortened} />
+
                 
                 
             </section>
