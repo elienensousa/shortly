@@ -6,12 +6,13 @@ import validatorUrl from '../../util/validator'
 import { ShortenedList } from '../ShortenedList'
 
 export function ShortenerForm (){
-    const [loading, setLoading] = useState(false)
-    const [input, setIput] = useState("")
-    const [shortened, setShortened] = useState("")
     const [validUrl, setValidUrl] = useState(true)
-
-
+    const [loading, setLoading] = useState(false)
+    const [url, setUrl] = useState([])
+    const [input, setIput] = useState("")
+    /*const [shortened, setShortened] = useState("")*/
+    
+    
     const handleClick = async () => {
         if(validatorUrl(input)){
             setValidUrl(true)
@@ -20,8 +21,12 @@ export function ShortenerForm (){
                 const response = await axios(
                     `https://api.shrtco.de/v2/shorten?url=${input}`
                 )
-                setShortened(response.data.result.full_short_link)
-
+                /*setShortened( response.data.result.full_short_link)*/
+                
+                setUrl([...url,{urlInput:input, urlShortened: response.data.result.full_short_link}])
+                
+                
+                setIput("")
                 setLoading(false)
             }catch(e){
                 console.log(e)
@@ -55,10 +60,10 @@ export function ShortenerForm (){
                     >Shorten It!</button>}
 
                 </div>
-                <ShortenedList input={input}
-                shortened={shortened} />
+               
+                <ShortenedList userUrl={url} />	    
 
-                
+                 
                 
             </section>
         </>
