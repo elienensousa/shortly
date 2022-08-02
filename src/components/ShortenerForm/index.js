@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {  useEffect, useState } from 'react'
 import axios from 'axios'
 import './styles.scss'
 import { LoadingButton } from './LoadingButton'
@@ -8,11 +8,24 @@ import { ShortenedList } from '../ShortenedList'
 export function ShortenerForm (){
     const [validUrl, setValidUrl] = useState(true)
     const [loading, setLoading] = useState(false)
-    const [url, setUrl] = useState([])
     const [input, setIput] = useState("")
-    /*const [shortened, setShortened] = useState("")*/
     
+    const [urlStorage, setUrlStorage] = useState(() => {
+        const data =  JSON.parse(sessionStorage.getItem("@StorageUrl"))
+
+        if (data){
+            return data
+           } else {
+            return []
+           }
+    })
+
+    useEffect(() => {
+        sessionStorage.setItem("@StorageUrl",JSON.stringify(urlStorage))
+    },[urlStorage])
+
     
+
     const handleClick = async () => {
         if(validatorUrl(input)){
             setValidUrl(true)
@@ -21,21 +34,20 @@ export function ShortenerForm (){
                 const response = await axios(
                     `https://api.shrtco.de/v2/shorten?url=${input}`
                 )
-                /*setShortened( response.data.result.full_short_link)*/
-                
-                setUrl([...url,{urlInput:input, urlShortened: response.data.result.full_short_link}])
-                
+
+                setUrlStorage([...urlStorage,{urlInput:input, urlShortened: response.data.result.full_short_link}])
                 
                 setIput("")
-                setLoading(false)
+                setLoading(false)    
             }catch(e){
                 console.log(e)
             }
         }else{
             setValidUrl(false)
         }
-
     }
+
+    
 
 
     return(
@@ -61,7 +73,7 @@ export function ShortenerForm (){
 
                 </div>
                
-                <ShortenedList userUrl={url} />	    
+                <ShortenedList userUrl={urlStorage} />	    
 
                  
                 
