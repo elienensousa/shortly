@@ -1,0 +1,23 @@
+.copy_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    width: 130px;
+    color: white;
+    background: var(--cyan);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+
+    &:hover{
+        background: hsl(180, 66%, 75%);
+    }
+
+    &.active{
+        background: var(--dark_violet);
+    }
+
+}

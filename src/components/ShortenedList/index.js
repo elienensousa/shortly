@@ -1,6 +1,8 @@
+import { CopyButton } from './CopyButton'
 import './styles.scss'
 
 export function ShortenedList({userUrl}){
+
     return(
     <>            
     {userUrl.map(url => (
@@ -24,7 +26,7 @@ export function ShortenedList({userUrl}){
                 </a>
             </span>
        </div>
-       <button className='copy_button'>Copy</button>
+        <CopyButton urlShortened = {url.urlShortened} />
     </div>
     ))}
         
