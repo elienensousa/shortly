@@ -11,12 +11,13 @@
         justify-content: center;
         border-radius: 10px;
         background: url('../../assets/bg-shorten-desktop.svg') var(--dark_violet);
-        width: 1110px;
+        background-size: cover;
+        width: 85% ;
         height: 168px;
 
 
         .shorter_input{
-            width: 70%;
+            width: 75%;
             height: 60px;
             border-radius: 10px;
             border: none;
@@ -26,7 +27,7 @@
         }
         
         .invalid_url{
-            width: 70%;
+            width: 75%;
             height: 60px;
             border-radius: 10px;
             border: 3px solid var(--red);
@@ -63,5 +64,27 @@
         
     }
 
+
+}
+
+
+
+@media (max-width: 600px){
+    .shorter_section{
+
+        .shorter_wrapper{
+            background: url('../../assets/bg-shorten-mobile.svg') var(--dark_violet);
+            background-size: cover;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+
+            .shorter_button{
+                width: 75%;
+                margin: 0;
+            }
+        }
+    }
 
 }

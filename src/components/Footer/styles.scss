@@ -1,6 +1,6 @@
 footer{
     width: auto;
-    height: 340px;
+    height: auto;
     background: var(--very_dark_violet);
     color: white;
 
@@ -8,7 +8,7 @@ footer{
     align-items: flex-start;
     justify-content: space-around;
     flex-direction: row;
-    padding-top: 90px;
+    padding: 90px 0 30px 0;
 
     .footer_logo {
         filter: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(79%) hue-rotate(220deg) brightness(107%) contrast(100%);
@@ -65,4 +65,27 @@ footer{
         a{
             color: var(--cyan);
         }
+}
+
+
+@media (max-width: 600px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+
+        nav{
+            margin: 30px 0;
+            flex-direction: column;
+            display: block;
+            text-align: center;
+            ul{
+                
+                h4{
+                    padding: 40px 0 10px 0;   
+                }
+            
+            }
+
+        }
+    }
 }

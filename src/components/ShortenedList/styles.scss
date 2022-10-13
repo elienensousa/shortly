@@ -7,8 +7,8 @@
     padding: 20px 30px;
     background: white;
     border-radius: 5px;
-    width: 1110px;
-    height: 70px;
+    width: 85%;
+    height: 40%;
 
     .content{
         width: 85%;
@@ -26,4 +26,25 @@
             }
         }
     }
+}
+
+@media (max-width: 600px){
+    .shortened{
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        overflow: hidden;
+        .content{
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-bottom: 10px;
+
+            .input_url{
+                padding-bottom: 10px;
+
+            }
+        }
+    }
+
 }

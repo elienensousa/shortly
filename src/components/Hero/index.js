@@ -11,7 +11,11 @@ export function Hero(){
                     <p> Build your brand’s recognition and get detailed insights on how your links are performing.</p>
                     <button className='start_button'>Get Started</button>
                 </div>
-                <img className='illustration_working' src={hero} alt='A person working' />
+
+                <div className='illustration_working'>
+                    <img src={hero} alt='A person working' />
+                </div>
+                
             </section>
         </>
     )

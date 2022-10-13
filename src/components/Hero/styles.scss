@@ -6,7 +6,6 @@
     justify-content: space-around;
     flex-direction: row;
     padding-bottom: 150px;
-    
 
     .content{
         display: flex;
@@ -19,7 +18,7 @@
         padding: 0 100px 0 100px;
 
         h1{
-            font-size: 70px;
+            font-size: 4rem;
             color: var(--very_dark_blue);
             
         }
@@ -30,9 +29,14 @@
 
     }
 
-    .illustration-working{
-        width: 733px;
-        height: 482px;
+    .illustration_working{
+        width: 100%;
+        overflow-x: hidden;
+
+        img{
+            margin-right: -20px;
+        }
+       
     }
 
     .start_button{
@@ -54,4 +58,28 @@
             opacity: 0.5;
         }
     }
+}
+
+@media (max-width: 600px){
+    .hero{
+        flex-direction: column-reverse;
+
+        .content{
+            h1{
+                text-align: center;
+                font-size: 3rem;
+            }
+
+            p{
+                text-align: center;
+            }
+
+            .start_button{
+                align-self: center;
+            }
+        }
+
+        
+    }
+
 }

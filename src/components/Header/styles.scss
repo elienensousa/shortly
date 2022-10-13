@@ -14,24 +14,124 @@ header{
     }
 
 
-
-    nav {
+    .header_nav{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-
-        ul{
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        nav {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding-left: 10px;
+
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding-left: 10px;
+
+                li{
+                    list-style-type: none;
+                    padding-left:20px ;
+                    color: var(--grayish_violet);
+                    font-weight: bold;
+
+                    &:hover{
+                        cursor: pointer;
+                        color: var(--very_dark_violet);
+                    }
+                }
+            }
+        }
+
+        .buttons{
+
+            button{
+                height: 40px;
+                width: 100px;
+            }
+            .login{
+                color: var(--grayish_violet);
+                background: none;
+                border: none;
+                font-weight: bold;
+                margin-right: 20px;
+    
+                &:hover{
+                    color: var(--very_dark_violet)
+                }
+            }
+            .sign_up{
+                color: white;
+                background: var(--cyan);
+                border-radius: 20px;
+                border: none;
+                font-weight: bold;
+    
+                transition: opacity 0.2s;
+                
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+    
+        }
+    }
+}
+
+.header_nav_mob{
+    display: none;
+}
+
+@media (max-width: 600px){
+   
+header{
+    margin: auto;
+    padding: 2rem 0 2rem 0;
+    
+    
+    .header_nav{
+        display: none;
+    }
+   
+    .hb_menu{
+        .hb_line{
+            width: 30px;
+            height: 4px;
+            background-color: var(--gray);
+            margin: 6px 0;
+        }
+       }
+}
+
+.header_nav_mob_visible{
+    display: block;
+    position: absolute;
+    background: var(--dark_violet);
+    margin-left: 4rem;
+    width: 80%;
+    border-radius: 10px;
+    padding: 30px;
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
 
             li{
                 list-style-type: none;
-                padding-left:20px ;
-                color: var(--grayish_violet);
+                color: var(--gray_100);
                 font-weight: bold;
-
+                padding: 10px 0 10px 0;
                 &:hover{
                     cursor: pointer;
                     color: var(--very_dark_violet);
@@ -39,18 +139,31 @@ header{
             }
         }
     }
-    .buttons{
 
+    nav::after{
+        content: "";
+        width: 90%;
+        border: 1px solid var(--gray);
+        opacity: 0.2;
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         button{
             height: 40px;
             width: 100px;
+            
         }
         .login{
-            color: var(--grayish_violet);
+            color: var(--gray_100);
             background: none;
             border: none;
             font-weight: bold;
-            margin-right: 20px;
+            
 
             &:hover{
                 color: var(--very_dark_violet)
@@ -62,7 +175,7 @@ header{
             border-radius: 20px;
             border: none;
             font-weight: bold;
-
+            
             transition: opacity 0.2s;
             
             &:hover{
@@ -71,5 +184,6 @@ header{
         }
 
     }
+    
 }
-
+}
